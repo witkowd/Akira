@@ -66,6 +66,7 @@ parts:
       - libgtksourceview-3.0-dev
       - libxml2-dev
       - libglib2.0-dev
+      - python3-distutils-extra
     stage-packages:
       - libdatrie1
       - libdbus-1-3
