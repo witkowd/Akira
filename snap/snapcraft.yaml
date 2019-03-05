@@ -7,18 +7,18 @@ description: |
 
 grade: stable
 confinement: strict
-icon: data/assets/icons/com.github.alecaddd.akira.png
+icon: data/icons/128x128/com.github.akiraux.akira.png
 
 apps:
   akira:
-    command: desktop-launch $SNAP/usr/bin/com.github.alecaddd.akira
+    command: desktop-launch $SNAP/usr/bin/com.github.akiraux.akira
     plugs:
       - desktop
       - desktop-legacy
       - opengl
       - x11
     slots: [ dbus-akira ]
-    desktop: usr/share/applications/com.github.alecaddd.akira.desktop
+    desktop: usr/share/applications/com.github.akiraux.akira.desktop
     environment:
       GSETTINGS_SCHEMA_DIR: $SNAP/share/glib-2.0/schemas
 
@@ -44,7 +44,7 @@ slots:
   dbus-akira:
     interface: dbus
     bus: session
-    name: com.github.alecaddd.akira
+    name: com.github.akiraux.akira
 
 parts:
   akira:
@@ -55,7 +55,7 @@ parts:
     source: .
     override-build: |
       snapcraftctl build
-      sed -i 's|Icon=com.github.alecaddd.akira|Icon=${SNAP}/data/assets/icons/com.github.alecaddd.akira.png|' ${SNAPCRAFT_PART_INSTALL}/usr/share/applications/com.github.alecaddd.akira.desktop
+      sed -i 's|Icon=com.github.akiraux.akira|Icon=${SNAP}/data/icons/128x128/com.github.akiraux.akira.png|' ${SNAPCRAFT_PART_INSTALL}/usr/share/applications/com.github.akiraux.akira.desktop
     build-packages:
       - libgtk-3-dev
       - valac
