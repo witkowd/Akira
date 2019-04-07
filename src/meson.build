@@ -33,6 +33,7 @@ executable(
     'Services/EventBus.vala',
 
     'Utils/Dialogs.vala',
+    'Utils/BlendingMode.vala',
 
     'Layouts/HeaderBar.vala',
     'Layouts/LeftSideBar.vala',
@@ -46,6 +47,12 @@ executable(
     'Layouts/Partials/Layer.vala',
     'Layouts/Partials/TransformPanel.vala',
     'Layouts/Partials/AlignItemsPanel.vala',
+    'Layouts/Partials/FillsBoxPanel.vala',
+    'Layouts/Partials/FillItem.vala',
+    'Layouts/Partials/BlendingModeItem.vala',
+
+    'Models/FillsItemModel.vala',
+    'Models/FillsListModel.vala',
 
     'Partials/HeaderBarButton.vala',
     'Partials/MenuButton.vala',
