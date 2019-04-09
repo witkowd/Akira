@@ -82,7 +82,7 @@ public class Akira.Layouts.Partials.FillItem : Gtk.Grid {
     private Gtk.Button selected_blending_mode_cont;
     private Gtk.Label selected_blending_mode;
     private Gtk.Label current_opacity;
-    private Gtk.Button selected_color;
+    private Gtk.ColorButton selected_color;
     private Gtk.Popover blending_mode_popover;
     private Gtk.ListBox blending_mode_popover_items;
 
@@ -112,9 +112,12 @@ public class Akira.Layouts.Partials.FillItem : Gtk.Grid {
         fill_chooser = new Gtk.Grid ();
         fill_chooser.hexpand = true;
 
-        selected_color = new Gtk.Button ();
+        selected_color = new Gtk.ColorButton ();
         selected_color.can_focus = false;
         selected_color.get_style_context ().add_class ("selected-color");
+        Gdk.RGBA rgba = Gdk.RGBA();
+        rgba.parse(color);
+        selected_color.set_rgba(rgba);
 
         selected_blending_mode = new Gtk.Label ("");
         selected_blending_mode.hexpand = true;
